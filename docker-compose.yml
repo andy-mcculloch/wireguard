@@ -26,7 +26,7 @@ services:
       - 51821:51821/tcp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
-    restart: always
+    restart: unless-stopped
     networks:
       user-vlan:
         # ipv4_address: ${USER_VLAN_IP}
